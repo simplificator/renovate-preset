@@ -1,0 +1,72 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "labels": [
+    "dependencies"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.semaphore/.*.$"
+      ],
+      "matchStrings": [
+        "sem-service start (?<depName>.*?) (?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "docker",
+      "registryUrlTemplate": "https://registry.semaphoreci.com"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchCurrentVersion": ">= 1.0.0",
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "matchCurrentVersion": "< 1.0.0",
+      "groupName": "all 0.X.Y patch dependencies",
+      "groupSlug": "all-v0-patch",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchManagers": [
+        "bundler"
+      ],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchManagers": [
+        "mix"
+      ],
+      "rangeStrategy": "pin"
+    }
+  ],
+  "schedule": [
+    "before 8am on monday"
+  ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ],
+    "schedule": "at any time"
+  },
+  "dependencyDashboard": true
+}
