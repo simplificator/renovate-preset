@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "regexManagers:dockerfileVersions"
+  ],
   "labels": [
     "dependencies"
   ],
@@ -14,6 +17,17 @@
       ],
       "datasourceTemplate": "docker",
       "registryUrlTemplate": "https://registry.semaphoreci.com"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/)Gemfile.lock$"
+      ],
+      "matchStrings": [
+        "BUNDLED WITH\\n[ ]+(?<currentValue>.*)(?:$|\\n)"
+      ],
+      "datasourceTemplate": "rubygems",
+      "depNameTemplate": "bundler"
     }
   ],
   "packageRules": [
