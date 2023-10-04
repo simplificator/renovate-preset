@@ -5,6 +5,7 @@
 A Renovate preset with common configuration for all Simplificator projects. The configuration currently applies the following:
 
 * Regex manager for [background services on Semaphore CI](https://docs.semaphoreci.com/ci-cd-environment/sem-service-managing-databases-and-services-on-linux/).
+* Regex manager to update the bundler version found in `Gemfile.lock`.
 * Group all non-major updates for packages with versions above 1.0.0.
 * Group all patch updates for packages below version 1.0.0.
 * Apply the `bump` strategy for `npm`.
