@@ -9,6 +9,7 @@ A Renovate preset with common configuration for all Simplificator projects. The 
 * Regex manager to update the bundler version found in `Gemfile.lock`.
 * Group all non-major updates for packages with versions above 1.0.0.
 * Group all patch updates for packages below version 1.0.0.
+* Create a separate group for all non-patch Rails updates.
 * Apply the `bump` strategy for `npm`.
 * Apply the `update-lockfile` strategy for `bundler`.
 * Apply the `pin` strategy for `mix`.
