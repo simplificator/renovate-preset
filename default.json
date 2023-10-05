@@ -55,6 +55,20 @@
       ]
     },
     {
+      "matchPackageNames": [
+        "rails"
+      ],
+      "matchPackagePatterns": [
+        "^@rails/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "commitMessageAction": "Apply",
+      "groupName": "all non-patch Rails updates"
+    },
+    {
       "matchManagers": [
         "npm"
       ],
