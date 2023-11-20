@@ -75,6 +75,11 @@
       ]
     },
     {
+      "groupName": "all non-patch vite updates",
+      "matchUpdateTypes": ["major", "minor"],
+      "matchPackagePatterns": ["^vite"]
+    },
+    {
       "matchManagers": [
         "npm"
       ],
