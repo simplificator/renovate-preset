@@ -69,6 +69,12 @@
       "groupName": "all non-patch Rails updates"
     },
     {
+      "groupName": "all factory_bot updates",
+      "matchPackagePatterns": [
+        "^factory_bot"
+      ]
+    },
+    {
       "matchManagers": [
         "npm"
       ],
