@@ -69,12 +69,6 @@
       "groupName": "all non-patch Rails updates"
     },
     {
-      "groupName": "all factory_bot updates",
-      "matchPackagePatterns": [
-        "^factory_bot"
-      ]
-    },
-    {
       "groupName": "all non-patch vite updates",
       "matchUpdateTypes": ["major", "minor"],
       "matchPackagePatterns": ["^vite"]
