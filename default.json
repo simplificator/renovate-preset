@@ -70,8 +70,19 @@
     },
     {
       "groupName": "all non-patch vite updates",
-      "matchUpdateTypes": ["major", "minor"],
-      "matchPackagePatterns": ["^vite"]
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "matchPackagePatterns": [
+        "^vite"
+      ]
+    },
+    {
+      "groupName": "all Ruby updates",
+      "matchPackagePatterns": [
+        "^ruby"
+      ]
     },
     {
       "matchManagers": [
