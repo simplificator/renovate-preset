@@ -85,6 +85,15 @@
       ]
     },
     {
+      "groupName": "all major turbo-rails upgrades",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchPackagePatterns": [
+        "turbo-rails$"
+      ]
+    },
+    {
       "matchManagers": [
         "npm"
       ],
